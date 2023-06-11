@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Healthy food</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script type="js/scripts.js" src="../js/scripts.js"></script>
+
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Healthy food</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    </ul>
+                    <div class="search-container">
+                        <input type="text" class="search-bar" placeholder="제품을 검색하세요">
+                        <button class="search-button">검색</button>
+                      </div>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                           
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Healthy food</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                </div>
+            </div>
+        </header>
+        <section class="ad-banner">
+            <div class="slider" style=" flex: 0 0 100%; height: auto; object-fit: cover;">
+            <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/zincbanner052423_001ko-kr.jpg" 
+            alt="아연 최대 50% 할인" srcset="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/zincbanner052423_001ko-kr.jpg 1x,https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/zincbanner052423_001hdko-kr.jpg 2x" class="cms-banner-img">
+            <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/firstaidbanner052423_001ko-kr.jpg" 
+            alt="가정상비약 &amp; 응급처치 최대 40% 할인" srcset="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/firstaidbanner052423_001ko-kr.jpg 1x,https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/firstaidbanner052423_001hdko-kr.jpg 2x" class="cms-banner-img">
+            <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/brain-cogbanner0524_001ko-kr.jpg" 
+            alt="두뇌 &amp; 인지 20% 할인" srcset="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/brain-cogbanner0524_001ko-kr.jpg 1x,https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cms/banners/brain-cogbanner0524_001hdko-kr.jpg 2x" class="cms-banner-img">
+            </div>
+            </section>
+            
+            <style>
+                .ad-banner {
+                  width: 100%;
+                  overflow: hidden;
+                }
+              
+                .slider {
+                  display: flex;
+                  transition: transform 0.5s ease;
+                }
+              
+                .cms-banner-img {
+                  width: 100%;
+                }
+              
+                @media (max-width: 768px) {
+                  .cms-banner-img {
+                    height: auto;
+                  }
+                }
+              </style>
+              
+              <script>
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slider img');
+                let currentSlide = 0;
+                const slideCount = slides.length;
+                const slideWidth = slides[0].offsetWidth;
+              
+                function showSlide(slideIndex) {
+                  const offset = -slideIndex * slideWidth;
+                  slider.style.transform = `translateX(${offset}px)`;
+                }
+              
+                function nextSlide() {
+                  currentSlide = (currentSlide + 1) % slideCount;
+                  showSlide(currentSlide);
+                }
+              
+                // 5초마다 자동으로 슬라이드 변경
+                setInterval(nextSlide, 5000);
+              </script>
+              
+  
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img src="../img/best1.png" alt="상품 1">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    California Gold Nutrition, LactoBif 프로바이오틱스, <br>300억 CFU, 베지 캡슐 60정</p>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <h4>27,133원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Gold_Nutrition.html">제품 보기 </a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img src="../img/best2.png" alt="상품 2">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <p>Now Food,L-아르기닌,<br> 더블 스트렝스, 1,000mg,120정</p>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <h4>21,883원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="L-아르기닌.html">제품보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img src="../img/best3.png" alt="상품 3">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <p>Sports Research,오메가3 피쉬<br>오일, 트리플 스트렝스,소프트젤 120정</p>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <h4>35,680원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="오메가3.html">제품보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img src="../img/best4.png" alt="상품 4">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <p>Optimum Nutrition,Gold <br>Standard 100%유청,더블리치 초콜릿,<br>2.27kg</p>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                        
+                                    </div>
+                                    <!-- Product price-->
+                                    <h4>118,370원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Optimum Nutrition.html">제품보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img src="../img/best5.png" alt="상품 5">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <p>California Gold Mutrition,100%<br>분리 유청 단백질,무맛 <br>2.27kg</p>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <h4>69,326원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="California Gold Mutrition.html">제품보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img src="../img/best6.png" alt="상품 6">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <p>California Gold Nutrition, Gold C<br>USP등급 비타민C,100.mg,<br>베지 캡슐 60정</p>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <h4>6,783원</h4>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="vitaminC.html">제품보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class ="carousel-container">
+            <h3 style="font-weight: bold; margin-left: 30px;">블로그</h3>
+            <ul class="blog-list" style="display: flex;  width: 100%; height: auto; object-fit: cover;">
+              <li>
+                <a href="https://iherb.co/fVYkisd">
+                <img src="../img/blog1.webp" alt="블로그 1">
+               </a>
+               <p>피로 해소와 에너지 증진을 돕<br>는 식품 및 보충제</p>
+              </li>
+              <li>
+                <a href="https://iherb.co/Vd46KP7n">
+                <img src="../img/blog2.webp" alt="블로그 2">
+               </a>
+               <p>알레르기 및 천식 관리에 좋은<br>최고의 자연 요법</p>
+              </li>
+              <li>
+                <a href="https://iherb.co/xDZtuonN">
+                <img src="../img/blog3.webp" alt="블로그 3">
+               </a>
+               <p>스트레스성 탈모+모발 성장을<br>촉진하는 천연 솔루션</p>
+              </li>
+              <li>
+                <a href="https://iherb.co/R1e2x8nU">
+                <img src="../img/blog4.webp" alt="블로그 4">
+               </a>
+               <p>자외선으로부터 피부를 보호해<br>주는 최고의 전연식품</p>
+              </li>
+              <li>
+                <a href="https://iherb.co/TtYdfNu">
+                <img src="../img/blog5.webp" alt="블로그 5">
+               </a>
+               <p>피부와 정신의 연관성이 중요<br>한 이유</p>
+              </li>
+              <li>
+                <a href="https://iherb.co/NfQbopad">
+                <img src="img/blog6.webp" alt="블로그 6">
+               </a>
+               <p>자외선으로부터 피부를 보호해<br>주는 최고의 전연식품</p>
+              </li>
+            </ul>
+            <div class="buttons" style="border: none; background-color: white;">
+                <button class="prev-button">&lt;</button>
+                <button class="next-button">&gt;</button>
+              </div>
+          </section>
+        
+          <style>
+            .carousel-container {
+                width: 100%;
+                overflow: hidden;
+            }
+    
+            .blog-list {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                transition: transform 0.5s ease;
+            }
+    
+            .blog-list li {
+                flex: 0 0 calc(100% / 3 - 20px);
+                text-align: center;
+                margin-right: 20px;
+            }
+    
+            .buttons {
+                margin-top: 10px;
+                text-align: center;
+            }
+    
+            .buttons button {
+                margin: 0 5px;
+            }
+    
+            @media (max-width: 768px) {
+                .blog-list li {
+                    flex: 0 0 calc(100% / 2 - 20px);
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .blog-list li {
+                    flex: 0 0 100%;
+                    margin-right: 0;
+                }
+            }
+        </style>
+          
+          <script>
+            const carouselContainer = document.querySelector('.carousel-container');
+            const carousel = document.querySelector('.blog-list');
+            const slides = document.querySelectorAll('.blog-list li');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            let currentSlide = 0;
+            const slideWidth = slides[0].offsetWidth;
+            const slideCount = Math.ceil(slides.length / 3);
+    
+            carousel.style.width = `${slideWidth * slideCount * 3}px`; // 슬라이드 전체 너비 설정
+    
+            function showSlide(slideIndex) {
+                const offset = -slideIndex * slideWidth * 3;
+                carousel.style.transform = `translateX(${offset}px)`;
+            }
+    
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                showSlide(currentSlide);
+            }
+    
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                showSlide(currentSlide);
+            }
+    
+            // 3초마다 자동으로 슬라이드 변경
+            setInterval(nextSlide, 3000);
+    
+            // 이전 버튼 클릭 시 이전 슬라이드로 이동
+            prevButton.addEventListener('click', prevSlide);
+    
+            // 다음 버튼 클릭 시 다음 슬라이드로 이동
+            nextButton.addEventListener('click', nextSlide);
+        </script>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+            
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
